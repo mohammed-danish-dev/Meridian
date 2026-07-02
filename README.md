@@ -1,221 +1,449 @@
-## MERIDIAN - Guiding Enterprise Excellence.
+# Meridian
+
+> Enterprise Governance, Risk, Compliance, and Procurement Platform
+
+Meridian is a role-aware enterprise front-end that centralizes procurement, vendor management, risk tracking, compliance records, audit visibility, reporting, authentication, and account preferences in one application shell.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Enterprise-SaaS-blue?style=for-the-badge&logo=enterprise" alt="Enterprise SaaS" />
-  <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react" alt="React Vite" />
-  <img src="https://img.shields.io/badge/Redux-Toolkit-764ABC?style=for-the-badge&logo=redux" alt="Redux Toolkit" />
-  <img src="https://img.shields.io/badge/Material--UI-007FFF?style=for-the-badge&logo=mui" alt="Material UI" />
-  <img src="https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/React-19.0.1-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 19.0.1" />
+  <img src="https://img.shields.io/badge/Vite-6.2.3-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6.2.3" />
+  <img src="https://img.shields.io/badge/Redux%20Toolkit-2.12.0-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit 2.12.0" />
+  <img src="https://img.shields.io/badge/Material%20UI-9.1.2-007FFF?style=for-the-badge&logo=mui&logoColor=white" alt="Material UI 9.1.2" />
+  <img src="https://img.shields.io/badge/React%20Router-7.18.0-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" alt="React Router 7.18.0" />
+  <img src="https://img.shields.io/badge/Axios-1.18.1-5A29E4?style=for-the-badge&logo=axios&logoColor=white" alt="Axios 1.18.1" />
+  <img src="https://img.shields.io/badge/i18next-26.3.4-26A69A?style=for-the-badge" alt="i18next 26.3.4" />
+  <img src="https://img.shields.io/badge/Redux%20Persist-6.0.0-764ABC?style=for-the-badge" alt="Redux Persist 6.0.0" />
+  <img src="https://img.shields.io/badge/Status-Demo%20%2F%20Evaluation-2E7D32?style=for-the-badge" alt="Project Status" />
+  <img src="https://img.shields.io/badge/License-Unlicensed-lightgrey?style=for-the-badge" alt="License" />
 </p>
 
 <p align="center">
   <strong>Guiding Enterprise Excellence.</strong><br />
-  A Next-Generation Enterprise Governance, Risk, Compliance, and Procurement Platform.
+  A modern enterprise interface for governance, risk, compliance, procurement, and reporting workflows.
 </p>
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Business Background](#business-background)
+- [Problem Statement](#problem-statement)
+- [Product Vision](#product-vision)
+- [Objectives](#objectives)
+- [Key Features](#key-features)
+- [Target Users](#target-users)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [System Architecture](#system-architecture)
+- [Redux Architecture](#redux-architecture)
+- [Routing Architecture](#routing-architecture)
+- [Component Hierarchy](#component-hierarchy)
+- [Application Workflow](#application-workflow)
+- [Application Modules](#application-modules)
+- [User Roles & Permissions](#user-roles--permissions)
+- [Authentication & Authorization](#authentication--authorization)
+- [State Management](#state-management)
+- [API & Services](#api--services)
+- [Mock Data Strategy](#mock-data-strategy)
+- [UI / UX](#ui--ux)
+- [Performance Optimizations](#performance-optimizations)
+- [Testing Strategy](#testing-strategy)
+- [Screenshots](#screenshots)
+- [Installation & Quick Start](#installation--quick-start)
+- [Deployment](#deployment)
+- [Environment Variables](#environment-variables)
+- [Roadmap](#roadmap)
+- [Future Enhancements](#future-enhancements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
+- [Support](#support)
+- [Footer](#footer)
 
-- [🌟 Project Highlights](#-project-highlights)
-- [📖 Project Overview](#-project-overview)
-- [🏢 Business Background](#-business-background)
-- [⚙ Technology Stack](#-technology-stack)
-- [📂 Project Structure](#-project-structure)
-- [🏗 System Architecture](#-system-architecture)
-- [🔄 Redux Architecture](#-redux-architecture)
-- [🛣 Routing Architecture](#-routing-architecture)
-- [🧩 Component Hierarchy](#-component-hierarchy)
-- [🔄 Application Workflow](#-application-workflow)
-- [📦 Application Modules](#-application-modules)
-- [👨‍💼 User Roles & Permissions](#-user-roles--permissions)
-- [🔐 Authentication & Security](#-authentication--security)
-- [🗄 State Management](#-state-management)
-- [🌐 API & Services](#-api--services)
-- [📊 Mock Data Strategy](#-mock-data-strategy)
-- [🎨 UI / UX](#-ui--ux)
-- [⚡ Performance Optimizations](#-performance-optimizations)
-- [🧪 Testing](#-testing)
-- [📸 Application Screenshots](#-application-screenshots)
-- [🚀 Quick Start](#-quick-start)
-- [🌍 Deployment](#-deployment)
-- [🔧 Environment Variables](#-environment-variables)
-- [🛣 Roadmap](#-roadmap)
-- [🚀 Future Enhancements](#-future-enhancements)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [👨‍💻 Author](#-author)
-- [⭐ Support](#-support)
+## Project Overview
+Meridian is a single-page enterprise application built with React and Vite. It presents a structured operating model for governance, risk, compliance, procurement, vendor oversight, reporting, and user preferences. The current implementation is front-end driven, with Redux Toolkit managing application state and mock data simulating enterprise workflows.
 
----
+## Business Background
+Large organizations often manage procurement, vendor oversight, compliance, risk, and audit in disconnected systems. That fragmentation creates duplicate work, inconsistent reporting, and reduced visibility for operational leaders. Meridian consolidates those flows into a unified user experience.
 
-## 🌟 Project Highlights
+## Problem Statement
+The codebase addresses fragmented enterprise operations, limited role-specific visibility, and manual coordination between procurement, risk, compliance, audit, and reporting teams. Meridian demonstrates how a modern front-end can centralize those workflows without a live backend during early delivery or evaluation.
 
-- ✅ **Enterprise SaaS Architecture** – Role-aware unified application shell designed for modern enterprise scaling.
-- ✅ **React + ```ts / Vite** – High-performance rendering pipeline and full type safety.
-- ✅ **Redux Toolkit & Persist** – Global decoupled state architecture with state preservation across sessions.
-- ✅ **Role-Based Access Control (RBAC)** – Dynamic layout and capability routing tailored to authenticated organizational profiles.
-- ✅ **Procurement Workspace** – Comprehensive purchase requisition execution and automated vendor onboarding.
-- ✅ **Risk & Compliance Centers** – Integrated matrix engines for organizational risk analysis and mitigation records.
-- ✅ **Executive Dashboards** – Advanced data reporting frameworks utilizing comprehensive mock telemetry.
-- ✅ **Dark / Light Modes** – Built-in accessible Material UI thematic overrides.
+## Product Vision
+Provide a professional enterprise control center where authenticated users can navigate role-specific modules, manage records, inspect dashboards, export reports, update preferences, and preserve session context across reloads.
 
----
+## Objectives
+- Centralize procurement, vendor, risk, compliance, audit, and reporting workflows.
+- Enforce role-based navigation and access control.
+- Present enterprise metrics through a responsive dashboard.
+- Support local editing, filtering, exporting, and inspection of records.
+- Preserve auth and UI preferences across sessions.
+- Support localization for English and Hindi.
 
-## 📖 Project Overview
+## Key Features
+- Role-aware login with demo credentials.
+- Protected application shell with sidebar, header, breadcrumbs, search, and notifications.
+- Dashboard with KPIs, charts, and recent activity views.
+- Procurement list with create, update, delete, filter, details, approval, and export actions.
+- Vendor list with onboarding, profile dialogs, deletion, and export.
+- Risk registry with record management and export.
+- Compliance registry with record management and export.
+- Audit log browser with search, sorting, and export.
+- Reports hub with role-based report cards and export actions.
+- Settings module for profile, password, language, timezone, and notification preferences.
+- Landing page with enterprise marketing content and contact/demo form.
+- Public resource pages for blogs, documentation, FAQs, privacy policy, and terms of service.
+- Theme switching between light and dark modes.
+- Persisted auth and UI state.
+- Global search across permitted records.
 
-**Meridian** provides an enterprise-ready, role-aware front-end shell built to integrate complex operations across global business units. It consolidates segmented internal toolsets—specifically Procurement, Vendor Management, Risk Assessment, Compliance, and Internal Audits—into an optimized single-page application (SPA).
+## Target Users
+- **Employee**: Submits and tracks procurement requests and views personal dashboard data.
+- **Manager**: Reviews procurement activity, manages vendors, and accesses reporting surfaces.
+- **Compliance Officer**: Maintains compliance records, reviews risk signals, and exports compliance-oriented reports.
+- **Auditor**: Reviews audit logs and audit-related reporting for traceability.
+- **Administrator**: Has broad access across protected modules, settings, and oversight capabilities.
+- **Guest / Public Visitor**: Accesses the public landing page and resource pages such as blogs, documentation, FAQs, privacy policy, terms, and sign-in screens.
 
----
-
-## 🏢 Business Background
-
-### ❗ Problem Statement
-Large corporations lose millions annually to operational fragmentation. Procurement pipelines operate isolated from legal compliance registries, while risk tracking happens inside siloed static spreadsheets. This lack of centralized data transparency causes multi-role visibility blackouts, audit delays, and regulatory penalties.
-
-### 🎯 Product Vision
-Meridian solves organizational fragmentation by delivering a consolidated application shell. It acts as a single pane of glass, synthesizing workflows across lines of business (LoB) while offering secure, auditable, and role-specific access control maps.
-
-### 🎯 Objectives
-- **Centralize Workflows:** Replace disconnected SaaS solutions with a clean, unified dashboard layout.
-- **Enforce Governance:** Bridge the visibility gap between corporate procurement actions and internal risk matrices.
-- **Optimize UI Performance:** Keep client-side interactions highly responsive using a robust state management layer.
-
----
-
-## ⚙ Technology Stack
+## Technology Stack
 
 | Technology | Purpose | Version |
-| :--- | :--- | :--- |
-| **React** | Component declarative composition layer | `^18.x` / `^19.x` |
-| **Vite** | Build toolchain and fast HMR development server | `^5.x` |
-| **Redux Toolkit** | Centralized global state management layer | `^2.x` |
-| **Material UI (MUI)** | Enterprise-grade accessible design library | `^5.x` / `^6.x` |
-| **React Router** | Declarative client-side routing and layout guards | `^6.x` |
-| **Axios** | Interceptor-driven HTTP client layer | `^1.x` |
-| **i18next** | Multi-language localization subsystem | `^23.x` |
-| **Redux Persist** | Client storage synchronization lifecycle manager | `^6.x` |
+|---|---|---:|
+| React | UI framework | 19.0.1 |
+| Vite | Build tool and development server | 6.2.3 |
+| Redux Toolkit | Centralized state management | 2.12.0 |
+| React Redux | React bindings for Redux | 9.3.0 |
+| Redux Persist | Persisted client state | 6.0.0 |
+| React Router DOM | Routing and navigation | 7.18.0 |
+| Material UI | Design system and component library | 9.1.2 |
+| Emotion | Styling engine used by MUI | 11.14.x |
+| Axios | HTTP client | 1.18.1 |
+| React Hook Form | Form state management | 7.80.0 |
+| Yup | Schema validation | 1.7.1 |
+| Recharts | Data visualization | 3.9.0 |
+| date-fns | Date helpers and formatting | 4.4.0 |
+| jsPDF | PDF generation | 4.2.1 |
+| xlsx | Excel export | 0.18.5 |
+| papaparse | CSV export | 5.5.4 |
+| i18next | Localization runtime | 26.3.4 |
+| react-i18next | React localization bindings | 17.0.8 |
+| motion | UI motion and transitions | 12.23.24 |
+| lucide-react | Supplemental icon set | 0.546.0 |
+| uuid | Client-side ID generation | 14.0.1 |
 
----
+## Project Structure
+```text
+meridian-_e---grcp/
+├── .env.example
+├── .gitignore
+├── README.md
+├── index.html
+├── metadata.json
+├── package-lock.json
+├── package.json
+├── src/
+│   ├── App.jsx
+│   ├── components/
+│   │   └── ScrollToTop.jsx
+│   ├── features/
+│   │   ├── Audit/
+│   │   ├── Auth/
+│   │   ├── Compliance/
+│   │   ├── Dashboard/
+│   │   ├── Landing/
+│   │   ├── Procurement/
+│   │   ├── Reports/
+│   │   ├── Resources/
+│   │   ├── Risk/
+│   │   ├── Settings/
+│   │   └── Vendors/
+│   ├── hooks/
+│   ├── index.css
+│   ├── layouts/
+│   ├── mocks/
+│   ├── routes/
+│   ├── services/
+│   ├── store/
+│   │   └── slices/
+│   └── tests/
+├── ts_errors.txt
+├── tsconfig.json
+└── vite.config.ts
+```
 
-## 📂 Project Structure
+## System Architecture
 
+**Architecture Diagram**
 
-meridian/
-├── .github/                # CI/CD Workflows
-├── public/                 # Static Assets & Locales
-└── src/
-    ├── assets/             # Brand logos and global media
-    ├── components/         # Shared presentation layer UI controls
-    ├── config/             # Theme configurations, environment constants
-    ├── hooks/              # Reusable custom React hooks
-    ├── layouts/            # Authentication & Application shell wrappers
-    ├── modules/            # Domain-isolated functional workspaces
-    │   ├── audit/          # Audit tracking records
-    │   ├── compliance/     # Regulatory criteria registers
-    │   ├── dashboard/      # Executive analytics dashboards
-    │   ├── procurement/    # PR/PO creation & tracking engines
-    │   ├── risk/           # Risk logs & matrix assessments
-    │   └── vendor/         # Vendor lifecycles & performance scores
-    ├── routes/             # RBAC guard configurations & engine mappings
-    ├── services/           # Axios engine instances & data endpoint contracts
-    ├── store/              # Redux slices, middlewares & persisted configuration
-    ├── utils/              # Pure functions & formatting helpers
-    ├── App.tsx             # Application bootstrap orchestration entrypoint
-    └── main.tsx            # DOM initialization node
-    
----
+> Insert Architecture Diagram here.
 
-🏗 System ArchitectureThe frontend is engineered around a clean, layered architectural pattern, establishing strict boundaries between data mutation, business operations, and the user interface.```text
+The application follows a layered frontend architecture:
 
+- **Overall frontend architecture**: A React 19 single-page application bootstrapped by Vite and wrapped in Redux Provider, Redux Persist, and Material UI theme providers.
+- **Presentation layer**: Shared layout components, feature pages, dialogs, cards, DataGrid tables, and chart widgets render the user interface.
+- **Routing**: `react-router-dom` defines public pages, protected pages, and lazy-loaded route boundaries.
+- **State management**: Redux Toolkit slices manage auth, UI preferences, domain entities, notifications, dashboard metrics, audit logs, and reports.
+- **Service layer**: Axios, export helpers, formatting helpers, date utilities, and localization bootstrap live in `src/services/`.
+- **Mock data layer**: `src/mocks/dataGenerator.js` seeds enterprise-like users, procurements, vendors, risks, compliance items, audit logs, and notifications.
+- **UI layer**: Material UI provides theming, responsive layout primitives, dialogs, forms, navigation, and data tables.
+- **Data flow**: User actions dispatch Redux actions or async thunks, slices update state, selectors feed the UI, and the view re-renders with persisted preferences and filtered datasets.
 
-+-------------------------------------------------------------+
-|                      Presentation UI Layer                  |
-|          [MUI Theme Engine]  <--->  [React Components]      |
-+-------------------------------------------------------------+
-                              | (Dispatches Actions / Selectors)
-                              v
-+-------------------------------------------------------------+
-|                     State Orchestration                     |
-|           [Redux Toolkit Store] <-> [Redux Persist]         |
-+-------------------------------------------------------------+
-                              | (Triggers Side-Effects)
-                              v
-+-------------------------------------------------------------+
-|                     Service Abstraction                     |
-|          [Axios Interceptors] <---> [Mock Data Engine]      |
-+-------------------------------------------------------------+
-📌 Architecture Diagram[Insert Architecture Diagram Here]Presentation Layer: Built with Material UI (MUI) components configured to run seamlessly under both dynamic light and dark theme contexts.Routing Layer: Guarded structure powered by react-router-dom. Evaluates state privileges before mounting child layouts.Redux State Layer: Serves as the single source of truth, isolating UI configurations and temporary business workflows from volatile component lifecycles.Service Layer: Axios wrapper layer featuring automated interceptors designed to attach authorization headers and standardize response envelopes.🔄 Redux ArchitectureMeridian handles client-side updates through an event-driven Redux state architecture that isolates global variables from the UI layout.📌 Redux Flow Diagram[Insert Redux Flow Diagram Here]Store: Central instance configured with serialization overrides allowing execution synchronization with redux-persist.Slices: Features domain-separated states managing authentication (authSlice), system configurations (themeSlice), and cache modules.Dispatch Flow: Direct visual tracking where views emit strict descriptive payloads across middleware barriers to update state stores synchronously.🛣 Routing ArchitectureThe application uses an immutable routing registry configuration that builds the routing workspace tree dynamically based on roles.📌 Router Flow Diagram[Insert Router Flow Diagram Here]Public Routes: Open landing spaces and the /login gateway. Authenticated profiles hitting these endpoints are automatically forwarded back to internal modules.Protected Routes: Shielded layout boundaries that check for valid auth tokens in state before rendering children.Role-Based Routing: Validates active profile strings (Admin, ProcurementManager, ComplianceAuditor) against an allowed module array. Unauthorized requests trigger a safe redirection fallback.🧩 Component Hierarchy``text[App Entry]
-   │
-   └── [Redux Provider & Theme Context Providers]
-          │
-          └── [Router Orchestrator]
-                 ├── PublicLayout -> Login / Landing Pages
-                 └── PrivateLayout (Sidebar / Top Navbar / Content Shell)
-                        │
-                        ├── [Role-Based Guards]
-                        └── [Lazy Loaded Module Core Views]
-📌 Component Hierarchy Diagram[Insert Component Hierarchy Diagram Here]🔄 Application Workflow```text[User Login Request] ──> [Axios Sign-in Service] ──> [Store Encoded Session state]
-                                                               │
-                                                               v
-[Render Workspace Shell] <── [Verify RBAC Router Permissions] <───┘
-          │
-          ├──> [Procurement View] ──> Raise Requisitions ──> Mutate Redux Store Cache
-          └──> [Risk Center Matrix] ──> Update Mitigation Status ──> Real-time Dashboard Analytics
-📦 Application Modules📊 Executive DashboardProvides critical oversight through aggregated business unit statistics, open risk indexes, processing bottlenecks, and real-time ledger metrics.🛒 Procurement WorkspaceManages purchasing operations. Features full requisition drafting controls, purchase order progress trackers, and budget cap warning indicators.🤝 Vendor GovernanceTracks partner lifecycle lifespans, recording compliance standings, security assessment metrics, and active contract details.⚠️ Risk CenterHouses institutional risk registers, complete with custom priority scoring matrices and mitigation assignment tools.📜 Compliance CenterMonitors adherence to international standards like ISO 27001, SOC2, and GDPR via clear tracking checklists.🔍 Audit CenterProvides a transparent audit trail detailing historical operations, change records, and past policy adjustments.👨‍💼 User Roles & PermissionsPlatform ModuleGlobal AdministratorProcurement ManagerCompliance AuditorRisk AnalystSystem Settings✅ Full Access❌ No Access❌ No Access❌ No AccessProcurement Hub✅ View Only✅ Full Access❌ No Access❌ No AccessVendor Governance✅ Full Access✅ Full Access✅ View Only❌ No AccessRisk Matrix Center✅ Full Access❌ No Access✅ Full Access✅ Full AccessCompliance Logs✅ Full Access❌ No Access✅ Full Access🔬 Write OnlyAudit Trails✅ Full Access❌ No Access✅ Full Access❌ No Access🔐 Authentication & Security```json Web Token (JWT) Handling: Session tokens are stored securely in memory, backed by encrypted browser storage layers.Route Authorization Interceptors: Automatically runs state authorization checks before rendering protected interface layouts.Cross-Site Scripting (XSS) Protections: Uses strict native data-binding methods within React combined with custom sanitize filters to clean rich incoming mock text objects.🗄 State ManagementGlobal state mutations follow an optimized Redux Toolkit architecture.```tsimport { createSlice, PayloadAction } from '@reduxjs/toolkit';
+## Redux Architecture
 
-interface AuthState {
-  isAuthenticated: boolean;
-  user: null | { name: string; role: string; email: string };
-  token: string | null;
-}
+**Redux Flow Diagram**
 
-const initialState: AuthState = { isAuthenticated: false, user: null, token: null };
+> Insert Redux Flow Diagram here.
 
-const authSlice = createSlice({
-  name: 'auth',
-  initialState,
-  reducers: {
-    setCredentials: (state, action: PayloadAction<{ user: any; token: string }>) => {
-      state.isAuthenticated = true;
-      state.user = action.payload.user;
-      state.token = action.payload.token;
-    },
-    logOut: (state) => {
-      state.isAuthenticated = false;
-      state.user = null;
-      state.token = null;
-    },
-  },
-});
-🌐 API & ServicesThe network communication infrastructure is managed by a centralized Axios engine instance that automates global request headers, keeps track of processing timeouts, and handles error responses gracefully.[!NOTE]All outgoing data requests are formatted with standard application/json metadata headers. If an active session token is found in the Redux store, a global security interceptor automatically injects it into the request.📊 Mock Data StrategyTo maintain isolation and allow standalone execution without an active backend infrastructure, Meridian uses a robust local mocking layer. This setup mirrors authentic HTTP responses and introduces intentional network latency to test loading states and UI spinners.```ts// Latency injection wrapper utility for mock services
-export const mockDelay = <T>(data: T, delayMs = 600): Promise<T> => {
-  return new Promise((resolve) => setTimeout(() => resolve(data), delayMs));
-};
-🎨 UI / UXTheming Architecture: Built on Material UI's design framework, utilizing customized color palettes, modern typography scales, and unified border-radius styles.Light & Dark Adaptation: Implements explicit palette shifting that adjusts background contrasts and keeps readability high without requiring structural code updates.Responsive Layout Design: Uses dynamic flexible grid wrappers and adaptive viewport containers, ensuring high operational efficiency on screen sizes from mobile viewports to ultra-wide displays.⚡ Performance OptimizationsComponent Code Splitting: Uses React.lazy() and Suspense chunk splitting boundaries to lower initial JavaScript bundle footprints.Optimized Memoization: Uses useMemo and useCallback inside high-frequency tabular lists to avoid redundant component re-renders.Asset Optimization: Delivery optimization using inline vector asset formats (SVGs) instead of heavy legacy raster image structures where applicable.🧪 TestingThe platform maintains reliable unit and interaction test tracking via integrated testing tools.Jest – Primary orchestration testing runner engine framework.React Testing Library – Evaluates structural rendering outputs by verifying user interactions rather than implementation details.```bash# Execute full testing pipeline suites across code bases
-npm run test
+The Redux implementation is centered around `src/store/store.js` and the slices under `src/store/slices/`.
 
-# Run test runner coverage suites mapping analytical files
-npm run test:coverage
-📸 Application ScreenshotsSystem View Workspace ScreenVisual Mock Interface Capture ReferenceLanding Presentation Hub📷 [Insert Application Landing View Screenshot Here]Secure Authentication Gateway📷 [Insert Application Login View Screenshot Here]Executive Management Dashboard📷 [Insert Application Central Dashboard View Screenshot Here]Procurement Lifecycle Center📷 [Insert Application Procurement Component View Screenshot Here]Risk Assessment & Matrix Register📷 [Insert Application Risk Analysis View Screenshot Here]🚀 Quick Start📋 PrerequisitesEnsure your local environment has Node.js (v18.x or newer) and npm installed.🛠️ Installation & Execution```bash# 1. Clone the repository framework files
-git clone [https://github.com/your-organization/meridian.git](https://github.com/your-organization/meridian.git)
+- **Store configuration**: The root store combines `auth`, `ui`, `procurement`, `vendors`, `risk`, `compliance`, `notifications`, `dashboard`, `audit`, and `reports`.
+- **Slices**: Each business domain owns a dedicated slice with local CRUD-style reducers and mock-backed initial state.
+- **Reducers**: Redux Toolkit reducers use Immer-backed mutation syntax for compact immutable updates.
+- **Actions**: Components dispatch actions for login, logout, theme toggles, record changes, notification updates, and profile preferences.
+- **Async thunks**: `createAsyncThunk` is used for dashboard metrics, audit logs, and report generation to simulate asynchronous enterprise lifecycles.
+- **Selectors**: Components read state with `useSelector` at the point of use.
+- **Redux Persist**: Only `auth` and `ui` are persisted, preserving login state and interface preferences across reloads.
+- **State lifecycle**: A component dispatches an action, the slice updates, selectors expose the new state, and the affected UI re-renders immediately.
 
-# 2. Change workspace directories into root locations
-cd meridian
+## Routing Architecture
 
-# 3. Install external module lock dependencies
+**Router Flow Diagram**
+
+> Insert Router Flow Diagram here.
+
+Routing is defined in `src/routes/router.jsx` and uses lazy loading for route-level code splitting.
+
+- **Public routes**: `/`, `/blogs`, `/blogs/:id`, `/documentation`, `/faqs`, `/privacy`, `/terms`, `/login`, `/forgot-password`, `/reset-password`, and `/session-expired`.
+- **Protected routes**: `/dashboard`, `/procurement`, `/vendors`, `/risk`, `/compliance`, `/audit`, `/reports`, and `/settings` render inside the authenticated shell.
+- **Nested routes**: `AppLayout` renders the shared shell and places module content through `Outlet`.
+- **Role-based routing**: Route guards verify the authenticated user and allowed role list before rendering a module.
+- **Navigation flow**: Public users enter through the landing page or sign-in page, and authenticated users are directed to permitted modules based on role.
+
+## Component Hierarchy
+
+**Component Hierarchy Diagram**
+
+> Insert Component Hierarchy Diagram here.
+
+- **Layouts**: `AppLayout`, `Header`, `Sidebar`, and `GlobalSearch` form the persistent enterprise shell.
+- **Pages**: Feature pages under `src/features/` implement landing, auth, dashboard, module lists, reports, settings, and public resources.
+- **Reusable components**: `ScrollToTop` and `StatCard` are shared across the app.
+- **Feature components**: Forms, dialogs, lists, and tab panels are colocated with their domain modules.
+- **Hooks**: `useTranslation` synchronizes language selection, and `useHomeNavigation` routes users to role-appropriate landing destinations.
+- **Services**: HTTP, export, format, date, i18n, and translation helpers live in `src/services/`.
+- **Store**: Redux slices hold operational state consumed by layout, search, dashboard, forms, and notification surfaces.
+
+## Application Workflow
+1. A visitor opens the public landing page.
+2. The user navigates to sign-in or one of the public resource pages.
+3. The login screen validates credentials and dispatches the mock authentication flow.
+4. Successful authentication stores the user, token, and preferences in Redux.
+5. The protected shell renders with role-aware sidebar items and header controls.
+6. The user opens module pages, searches permitted records, and performs record actions.
+7. Lists, dialogs, and charts read from Redux state and refresh immediately after updates.
+8. Export actions create CSV, Excel, or PDF output from the current data set.
+9. Settings updates change profile, password, language, timezone, and notification preferences.
+
+## Application Modules
+
+### Landing Page
+Public-facing enterprise marketing page with navigation, theme toggle, resource links, statistics, dashboard preview, workflow narrative, and a contact/demo form.
+
+### Authentication
+Login, forgot password, reset password, and session-expired screens with role-aware demo access and local password update behavior.
+
+### Dashboard
+Role-sensitive dashboard with KPI cards, spend and risk visualizations, activity summaries, and export actions.
+
+### Procurement
+Procurement request browser with filtering, create/edit dialogs, approval and rejection actions, details dialog, deletion confirmation, and export support.
+
+### Vendors
+Vendor browser with onboarding, edit flow, profile dialog, search, deletion, rating display, and export support.
+
+### Risk
+Risk registry with severity, category, impact, likelihood, status, form-based record management, details view, deletion, and export support.
+
+### Compliance
+Compliance registry with certification and policy records, expiration tracking, form-based management, details view, deletion, and export support.
+
+### Audit
+Audit log browser with timestamped entries, module mapping, user mapping, search, sorting, and export support.
+
+### Reports
+Role-based export center for procurement, vendor, risk, compliance, and audit report types.
+
+### Settings
+Profile, security, preferences, and notifications tabs for avatar, personal information, password, language, timezone, and notification preferences.
+
+### Resources
+Public blogs, blog details, documentation, FAQs, privacy policy, and terms of service pages.
+
+### Notifications
+Header-level notification center powered by Redux state with mark-as-read and mark-all-as-read actions.
+
+### Global Search
+Header search component that searches permitted procurement, vendor, risk, compliance, audit, report, notification, and user data based on the current role.
+
+## User Roles & Permissions
+
+| Role | Scope | Key Permissions |
+|---|---|---|
+| Guest / Public Visitor | Public pages | View landing, blogs, documentation, FAQs, privacy policy, terms, and authentication screens. |
+| Employee | Personal procurement scope | View dashboard and manage their own procurement requests. |
+| Manager | Procurement and vendor operations | Review procurement requests, manage vendors, and access procurement/vendor reporting. |
+| Compliance Officer | Compliance oversight | Manage compliance records, review risk-related records, and access compliance reports. |
+| Auditor | Audit and review | Access audit logs and audit-related reports. |
+| Administrator | Full platform access | Access all protected modules, settings, and reporting surfaces. |
+
+## Authentication & Authorization
+- **Login**: The login form uses React Hook Form and Yup validation, then dispatches a mock login thunk against the in-memory user set.
+- **Forgot Password**: Simulates sending a recovery link and routes the user toward reset.
+- **Reset Password**: Validates the reset form and stores the updated password in Redux state.
+- **Protected routes**: `ProtectedRoute` checks authentication and role access before rendering the target module.
+- **Session management**: `redux-persist` preserves auth and UI state, and a session-expired screen is available for re-entry.
+- **Authorization**: Route-level checks, sidebar filtering, and role-aware global search keep users inside their permitted scope.
+
+## State Management
+Meridian uses Redux Toolkit as the central state layer. `createSlice` drives the majority of the domain state, and `createAsyncThunk` simulates asynchronous lifecycle behavior for dashboard, audit, and report workflows. Components use `useSelector` and `useDispatch` directly, which keeps state flow explicit and easy to audit.
+
+## API & Services
+The Axios client in `src/services/apiClient.js` is configured with a base URL of `VITE_API_URL` when available, or `/api` by default. It sets JSON headers, injects an authorization bearer token from the persisted auth state, and logs response conditions for 401, 403, and server-side errors.
+
+Supporting services include:
+- `exportUtils.js` for CSV, Excel, and PDF output.
+- `formatUtils.js` for INR currency formatting.
+- `dateUtils.js` for timezone-aware date and time formatting.
+- `i18n.js` and `translations.js` for localization bootstrap.
+
+## Mock Data Strategy
+The application relies on generated and static mock data to simulate enterprise datasets without a live backend. `src/mocks/dataGenerator.js` builds structured records for users, vendors, procurements, risks, compliance entries, audit logs, and notifications. JSON fixtures in `src/mocks/` support local evaluation and development.
+
+This approach allows the UI to behave like a real operational platform while keeping CRUD, search, filter, and export flows deterministic.
+
+## UI / UX
+- **Design System**: Material UI provides the design foundation, including AppBar, Drawer, DataGrid, Tabs, Dialogs, Cards, Menus, Snackbars, and responsive layout primitives.
+- **Responsive Design**: The interface adapts across mobile, tablet, and desktop breakpoints with collapsible navigation and stacked actions.
+- **Theme Support**: Light and dark modes are available through the `ui` slice and MUI theme generation.
+- **Accessibility**: Semantic controls, keyboard-friendly navigation, accessible form labels, and visible interactive states are used throughout the interface.
+
+## Performance Optimizations
+- **Lazy loading**: Major routes are loaded with `React.lazy()` and rendered through `Suspense`.
+- **Route splitting**: Public and protected pages are split at the router level to reduce the initial payload.
+- **Memoization**: `useMemo` is used in dashboard calculations, filtering, and dialog derivations.
+- **Redux Persist**: Preserves auth and UI state without reloading the full application state.
+- **Loading fallback**: A centralized spinner is displayed while route chunks resolve.
+
+## Testing Strategy
+The repository contains lightweight test files in `src/tests/` that validate reducers, service configuration, formatting utilities, and component exports.
+
+- **Reducer testing**: `authSlice.test.js` covers login, logout, profile updates, and password updates.
+- **Service testing**: `apiClient.test.js` verifies Axios defaults and interceptor registration.
+- **Utility testing**: `formatUtils.test.js` validates INR formatting behavior.
+- **Component testing**: `Header.test.jsx` and `ProcurementForm.test.jsx` verify component signatures.
+
+The project does not declare a full Jest or React Testing Library runtime in `package.json`, so the current test files should be treated as a lightweight foundation rather than a fully wired CI suite.
+
+## Screenshots
+
+### Landing Page
+> Insert Screenshot Here
+
+### Login
+> Insert Screenshot Here
+
+### Dashboard
+> Insert Screenshot Here
+
+### Procurement
+> Insert Screenshot Here
+
+### Vendors
+> Insert Screenshot Here
+
+### Risk
+> Insert Screenshot Here
+
+### Compliance
+> Insert Screenshot Here
+
+### Audit
+> Insert Screenshot Here
+
+### Reports
+> Insert Screenshot Here
+
+### Notifications
+> Insert Screenshot Here
+
+### Settings
+> Insert Screenshot Here
+
+### Contact
+> Insert Screenshot Here
+
+## Installation & Quick Start
+```bash
 npm install
-
-# 4. Spin up high performance local Vite development configurations
 npm run dev
-🏗️ Production Compilations```bash# Build optimized production-ready client bundles
-npm run build
+```
 
-# Local preview testing preview allocations prior to deployment distribution
-npm run preview
-🌍 DeploymentMeridian is configured for optimized deployment across enterprise static hosting infrastructures like AWS S3 + CloudFront, Azure Static Web Apps, Vercel, or Netlify.```textBuild output artifacts compile default targeted outputs into the isolated /dist directory.
-🔧 Environment VariablesCreate a .env file in the root directory to customize configuration settings:```envVITE_APP_NAME=Meridian
-VITE_API_BASE_URL=[https://api.meridian-enterprise.com/v1](https://api.meridian-enterprise.com/v1)
-VITE_ENABLE_MOCK_SERVICES=true
-🛣 Roadmap[x] Configure core React Vite application shell with full ```ts integration.[x] Set up Redux state slices along with Redux Persist storage integration.[x] Build out layouts for the Procurement, Risk, and Compliance dashboards.[ ] Connect production microservices to replace the temporary mock data layer.[ ] Add support for multiple languages using internationalization (i18n) workflows.[ ] Implement multi-tenant capability partitioning for enterprise deployments.🚀 Future EnhancementsPredictive Risk Analytics: Machine learning modules that flag supply chain bottlenecks before they happen.Automated Audit Logs: Immutable logging integrations using ledger services to secure corporate tracking history.Third-Party Integrations: Built-in connection layers for ERP platforms like SAP, Oracle Cloud, and Salesforce.🤝 ContributingWe welcome contributions to the Meridian platform. Please follow our contributing guidelines:Fork the repository.Create your feature branch (git checkout -b feature/AmazingFeature).Commit your changes (git commit -m 'Add some AmazingFeature').Push to the branch (git push origin feature/AmazingFeature).Open a Pull Request for review.📜 LicenseDistributed under the MIT Enterprise License. Review accompanying LICENSE files for legal information.👨‍💻 AuthorMohammed Danish Principal Enterprise Architect & UI Engineer🌐 Professional Portfolio💼 LinkedIn Profile📧 Enterprise Support Email⭐ SupportIf you found this project useful, please consider giving it a ⭐ on GitHub.
+The development server runs on port `3000` and binds to `0.0.0.0`.
+
+## Deployment
+The project builds to a static Vite output in `dist/`, which can be deployed to static hosting platforms such as Vercel, Netlify, Azure Static Web Apps, Nginx, or Cloud Run behind a static asset server.
+
+For deployment parity:
+- Configure the hosted app URL.
+- Provide `VITE_API_URL` if a real backend is added later.
+- Ensure SPA fallback routing is enabled for direct links.
+
+## Environment Variables
+The repository includes `.env.example` with the following values:
+
+- `GEMINI_API_KEY`: Runtime-injected secret for Gemini API use in AI Studio environments.
+- `APP_URL`: The hosted application URL used by the platform runtime.
+
+The current implementation also supports `VITE_API_URL` for a future backend integration.
+
+## Roadmap
+- Connect the mock CRUD flows to a real enterprise backend.
+- Add a complete automated testing pipeline with coverage reporting.
+- Introduce server-driven notifications and administration screens.
+- Expand reporting with scheduled exports and saved report definitions.
+- Replace demo authentication with a real identity provider and SSO.
+
+## Future Enhancements
+- Predictive risk analytics based on historical records.
+- Scheduled and role-based report delivery.
+- Server-backed notifications and activity feeds.
+- Expanded localization coverage.
+- Multi-tenant support for larger enterprise deployments.
+
+## Contributing
+Contributions should preserve the existing architecture, file organization, and enterprise UI language.
+
+1. Create a focused branch.
+2. Keep changes limited to the relevant module or service.
+3. Follow the existing React, Redux Toolkit, and Material UI patterns.
+4. Add or update tests when behavior changes.
+5. Run the available validation commands before opening a pull request.
+
+> [!NOTE]
+> Because the app is mock-data driven, changes to record shape or role access should be reviewed against the router, sidebar, search, and settings flows together.
+
+## License
+No license file is present in the repository at this time.
+
+## Author
+Not specified in the repository metadata.
+
+## Acknowledgements
+Built with React, Vite, Redux Toolkit, Redux Persist, Material UI, React Router, Axios, React Hook Form, Yup, Recharts, i18next, date-fns, jsPDF, xlsx, papaparse, motion, and lucide-react.
+
+## Support
+If this repository is useful, consider starring it on GitHub and including it in your technical review or portfolio evaluation.
+
+## Footer
+Meridian is structured to present a polished enterprise governance, risk, compliance, and procurement experience for review, evaluation, and future backend integration.

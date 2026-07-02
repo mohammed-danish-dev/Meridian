@@ -350,44 +350,6 @@ The repository includes lightweight Jest-style specs under `src/tests/` that foc
 
 React Testing Library and a dedicated Jest runner are not declared in the current `package.json`, so the existing test files should be treated as a lightweight foundation rather than a fully wired CI suite.
 
-## Screenshots
-
-### Landing Page
-> Insert Screenshot Here
-
-### Login
-> Insert Screenshot Here
-
-### Dashboard
-> Insert Screenshot Here
-
-### Procurement
-> Insert Screenshot Here
-
-### Vendors
-> Insert Screenshot Here
-
-### Risk
-> Insert Screenshot Here
-
-### Compliance
-> Insert Screenshot Here
-
-### Audit
-> Insert Screenshot Here
-
-### Reports
-> Insert Screenshot Here
-
-### Notifications
-> Insert Screenshot Here
-
-### Settings
-> Insert Screenshot Here
-
-### Contact Form
-> Insert Screenshot Here
-
 ## Installation
 ```bash
 npm install

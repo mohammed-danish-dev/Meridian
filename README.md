@@ -1,4 +1,4 @@
-# Meridian
+# Meridian - Guiding Enterprise Excellence.
 
 > Enterprise Governance, Risk, Compliance, and Procurement Platform
 
@@ -345,52 +345,6 @@ The repository contains lightweight test files in `src/tests/` that validate red
 
 The project does not declare a full Jest or React Testing Library runtime in `package.json`, so the current test files should be treated as a lightweight foundation rather than a fully wired CI suite.
 
-## Screenshots
-
-### Landing Page
-> Insert Screenshot Here
-
-### Login
-> Insert Screenshot Here
-
-### Dashboard
-> Insert Screenshot Here
-
-### Procurement
-> Insert Screenshot Here
-
-### Vendors
-> Insert Screenshot Here
-
-### Risk
-> Insert Screenshot Here
-
-### Compliance
-> Insert Screenshot Here
-
-### Audit
-> Insert Screenshot Here
-
-### Reports
-> Insert Screenshot Here
-
-### Notifications
-> Insert Screenshot Here
-
-### Settings
-> Insert Screenshot Here
-
-### Contact
-> Insert Screenshot Here
-
-## Installation & Quick Start
-```bash
-npm install
-npm run dev
-```
-
-The development server runs on port `3000` and binds to `0.0.0.0`.
-
 ## Deployment
 The project builds to a static Vite output in `dist/`, which can be deployed to static hosting platforms such as Vercel, Netlify, Azure Static Web Apps, Nginx, or Cloud Run behind a static asset server.
 
@@ -445,5 +399,20 @@ Built with React, Vite, Redux Toolkit, Redux Persist, Material UI, React Router,
 ## Support
 If this repository is useful, consider starring it on GitHub and including it in your technical review or portfolio evaluation.
 
-## Footer
-Meridian is structured to present a polished enterprise governance, risk, compliance, and procurement experience for review, evaluation, and future backend integration.
+---
+
+<div align="center">
+
+## ⭐ Thank You for Visiting
+
+**Meridian** is an enterprise-grade Governance, Risk, Compliance & Procurement platform developed to demonstrate scalable frontend architecture, modern UI/UX, and industry-standard software engineering practices.
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
+
+**"Guiding Enterprise Excellence."**
+
+Made with ❤️ by **Mohammed Danish**
+
+© 2026 Mohammed Danish. All Rights Reserved.
+
+</div>

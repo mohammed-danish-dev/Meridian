@@ -1,4 +1,4 @@
-MERIDIAN - Guiding Enterprise Excellence.
+## MERIDIAN - Guiding Enterprise Excellence.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Enterprise-SaaS-blue?style=for-the-badge&logo=enterprise" alt="Enterprise SaaS" />

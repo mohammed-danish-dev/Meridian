@@ -176,7 +176,7 @@ meridian-_e---grcp/
 
 **Architecture Diagram**
 
-> Insert Architecture Diagram here.
+![image alt](https://github.com/mohammed-danish-dev/Meridian/blob/c3f96a237adfd4dfdbfcae68af2053ec2e57bcdf/Image%20-%2001.png)
 
 The application follows a layered frontend architecture:
 

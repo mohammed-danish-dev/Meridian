@@ -1,5 +1,4 @@
-Markdown
-# Meridian
+Here is your completely restructured, production-ready README.md. It has been meticulously formatted with professional spacing, consistent Markdown components, and enhanced hierarchy.You can copy and paste this block directly into your project's root file:Markdown# Meridian
 
 <p align="center">
   <img src="https://img.shields.io/badge/Enterprise-SaaS-blue?style=for-the-badge&logo=enterprise" alt="Enterprise SaaS" />
@@ -66,7 +65,7 @@ Markdown
 
 ## 📖 Project Overview
 
-**Meridian** provides an enterprise-ready, role-aware front-end shell built to integrate complex operations across global business units. It consolidates segmented internal toolsets—specifically Procurement, Vendor Management, Risk Assessment, Compliance, and Internal Audits—into an optimized single-page application (SPA). 
+**Meridian** provides an enterprise-ready, role-aware front-end shell built to integrate complex operations across global business units. It consolidates segmented internal toolsets—specifically Procurement, Vendor Management, Risk Assessment, Compliance, and Internal Audits—into an optimized single-page application (SPA).
 
 ---
 
@@ -94,7 +93,7 @@ Meridian solves organizational fragmentation by delivering a consolidated applic
 | **Redux Toolkit** | Centralized global state management layer | `^2.x` |
 | **Material UI (MUI)** | Enterprise-grade accessible design library | `^5.x` / `^6.x` |
 | **React Router** | Declarative client-side routing and layout guards | `^6.x` |
-| **Axios** | Interceptor-driven HTTP client client layer | `^1.x` |
+| **Axios** | Interceptor-driven HTTP client layer | `^1.x` |
 | **i18next** | Multi-language localization subsystem | `^23.x` |
 | **Redux Persist** | Client storage synchronization lifecycle manager | `^6.x` |
 
@@ -125,10 +124,7 @@ meridian/
     ├── utils/              # Pure functions & formatting helpers
     ├── App.tsx             # Application bootstrap orchestration entrypoint
     └── main.tsx            # DOM initialization node
-🏗 System Architecture
-The frontend is engineered around a clean, layered architectural pattern, establishing strict boundaries between data mutation, business operations, and the user interface.
-
-+-------------------------------------------------------------+
+🏗 System ArchitectureThe frontend is engineered around a clean, layered architectural pattern, establishing strict boundaries between data mutation, business operations, and the user interface.Plaintext+-------------------------------------------------------------+
 |                      Presentation UI Layer                  |
 |          [MUI Theme Engine]  <--->  [React Components]      |
 +-------------------------------------------------------------+
@@ -144,37 +140,7 @@ The frontend is engineered around a clean, layered architectural pattern, establ
 |                     Service Abstraction                     |
 |          [Axios Interceptors] <---> [Mock Data Engine]      |
 +-------------------------------------------------------------+
-📌 Architecture Diagram
-Presentation Layer: Built with Material UI (MUI) components configured to run seamlessly under both dynamic light and dark theme contexts.
-
-Routing Layer: Guarded structure powered by react-router-dom. Evaluates state privileges before mounting child layouts.
-
-Redux State Layer: Serves as the single source of truth, isolating UI configurations and temporary business workflows from volatile component life cycles.
-
-Service Layer: Axios wrapper layer featuring automated interceptors designed to attach authorization headers and standardize response envelopes.
-
-🔄 Redux Architecture
-Meridian handles client-side updates through an event-driven Redux state architecture that isolates global variables from the UI layout.
-
-📌 Redux Flow Diagram
-Store: Central instance configured with serialization overrides allowing execution synchronization with redux-persist.
-
-Slices: Features domain-separated states managing authentication (authSlice), system configurations (themeSlice), and cache modules.
-
-Dispatch Flow: Direct visual tracking where views emit strict descriptive payloads across middleware barriers to update state stores synchronously.
-
-🛣 Routing Architecture
-The application uses an immutable routing registry configuration that builds the routing workspace tree dynamically based on roles.
-
-📌 Router Flow Diagram
-Public Routes: Open landing spaces and the /login gateway. Authenticated profiles hitting these endpoints are automatically forwarded back to internal modules.
-
-Protected Routes: Shielded layout boundaries that check for valid auth tokens in state before rendering children.
-
-Role-Based Routing: Validates active profile strings (Admin, ProcurementManager, ComplianceAuditor) against an allowed module array. Unauthorized requests trigger a safe redirection fallback.
-
-🧩 Component Hierarchy
-[App Entry]
+📌 Architecture Diagram[Insert Architecture Diagram Here]Presentation Layer: Built with Material UI (MUI) components configured to run seamlessly under both dynamic light and dark theme contexts.Routing Layer: Guarded structure powered by react-router-dom. Evaluates state privileges before mounting child layouts.Redux State Layer: Serves as the single source of truth, isolating UI configurations and temporary business workflows from volatile component lifecycles.Service Layer: Axios wrapper layer featuring automated interceptors designed to attach authorization headers and standardize response envelopes.🔄 Redux ArchitectureMeridian handles client-side updates through an event-driven Redux state architecture that isolates global variables from the UI layout.📌 Redux Flow Diagram[Insert Redux Flow Diagram Here]Store: Central instance configured with serialization overrides allowing execution synchronization with redux-persist.Slices: Features domain-separated states managing authentication (authSlice), system configurations (themeSlice), and cache modules.Dispatch Flow: Direct visual tracking where views emit strict descriptive payloads across middleware barriers to update state stores synchronously.🛣 Routing ArchitectureThe application uses an immutable routing registry configuration that builds the routing workspace tree dynamically based on roles.📌 Router Flow Diagram[Insert Router Flow Diagram Here]Public Routes: Open landing spaces and the /login gateway. Authenticated profiles hitting these endpoints are automatically forwarded back to internal modules.Protected Routes: Shielded layout boundaries that check for valid auth tokens in state before rendering children.Role-Based Routing: Validates active profile strings (Admin, ProcurementManager, ComplianceAuditor) against an allowed module array. Unauthorized requests trigger a safe redirection fallback.🧩 Component HierarchyPlaintext[App Entry]
    │
    └── [Redux Provider & Theme Context Providers]
           │
@@ -184,55 +150,14 @@ Role-Based Routing: Validates active profile strings (Admin, ProcurementManager,
                         │
                         ├── [Role-Based Guards]
                         └── [Lazy Loaded Module Core Views]
-📌 Component Hierarchy Diagram
-🔄 Application Workflow
-[User Login Request] ──> [Axios Sign-in Service] ──> [Store Encoded Session state]
+📌 Component Hierarchy Diagram[Insert Component Hierarchy Diagram Here]🔄 Application WorkflowPlaintext[User Login Request] ──> [Axios Sign-in Service] ──> [Store Encoded Session state]
                                                                │
                                                                v
 [Render Workspace Shell] <── [Verify RBAC Router Permissions] <───┘
           │
           ├──> [Procurement View] ──> Raise Requisitions ──> Mutate Redux Store Cache
           └──> [Risk Center Matrix] ──> Update Mitigation Status ──> Real-time Dashboard Analytics
-📦 Application Modules
-📊 Executive Dashboard
-Provides critical oversight through aggregated business unit statistics, open risk indexes, processing bottlenecks, and real-time ledger metrics.
-
-🛒 Procurement Workspace
-Manages purchasing operations. Features full requisition drafting controls, purchase order progress trackers, and budget cap warning indicators.
-
-🤝 Vendor Governance
-Tracks partner lifecycle lifespans, recording compliance standings, security assessment metrics, and active contract details.
-
-⚠️ Risk Center
-Houses institutional risk registers, complete with custom priority scoring matrices and mitigation assignment tools.
-
-📜 Compliance Center
-Monicals adherence to international standards like ISO 27001, SOC2, and GDPR via clear tracking checklists.
-
-🔍 Audit Center
-Provides a transparent audit trail detailing historical operations, change records, and past policy adjustments.
-
-👨‍💼 User Roles & Permissions
-Platform Module	Global Administrator	Procurement Manager	Compliance Auditor	Risk Analyst
-System Settings	✅ Full Access	❌ No Access	❌ No Access	❌ No Access
-Procurement Hub	✅ View Only	✅ Full Access	❌ No Access	❌ No Access
-Vendor Governance	✅ Full Access	✅ Full Access	✅ View Only	❌ No Access
-Risk Matrix Center	✅ Full Access	❌ No Access	✅ Full Access	✅ Full Access
-Compliance Logs	✅ Full Access	❌ No Access	✅ Full Access	🔬 Write Only
-Audit Trails	✅ Full Access	❌ No Access	✅ Full Access	❌ No Access
-🔐 Authentication & Security
-JSON Web Token (JWT) Handling: Session tokens are stored securely in memory, backed by encrypted browser storage layers.
-
-Route Authorization Interceptors: Automatically runs state authorization checks before rendering protected interface layouts.
-
-Cross-Site Scripting (XSS) Protections: Uses strict native data-binding methods within React combined with custom sanitize filters to clean rich incoming mock text objects.
-
-🗄 State Management
-Global state mutations follow an optimized Redux Toolkit architecture.
-
-TypeScript
-// Sample implementation demonstrating robust slice design patterns
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+📦 Application Modules📊 Executive DashboardProvides critical oversight through aggregated business unit statistics, open risk indexes, processing bottlenecks, and real-time ledger metrics.🛒 Procurement WorkspaceManages purchasing operations. Features full requisition drafting controls, purchase order progress trackers, and budget cap warning indicators.🤝 Vendor GovernanceTracks partner lifecycle lifespans, recording compliance standings, security assessment metrics, and active contract details.⚠️ Risk CenterHouses institutional risk registers, complete with custom priority scoring matrices and mitigation assignment tools.📜 Compliance CenterMonitors adherence to international standards like ISO 27001, SOC2, and GDPR via clear tracking checklists.🔍 Audit CenterProvides a transparent audit trail detailing historical operations, change records, and past policy adjustments.👨‍💼 User Roles & PermissionsPlatform ModuleGlobal AdministratorProcurement ManagerCompliance AuditorRisk AnalystSystem Settings✅ Full Access❌ No Access❌ No Access❌ No AccessProcurement Hub✅ View Only✅ Full Access❌ No Access❌ No AccessVendor Governance✅ Full Access✅ Full Access✅ View Only❌ No AccessRisk Matrix Center✅ Full Access❌ No Access✅ Full Access✅ Full AccessCompliance Logs✅ Full Access❌ No Access✅ Full Access🔬 Write OnlyAudit Trails✅ Full Access❌ No Access✅ Full Access❌ No Access🔐 Authentication & SecurityJSON Web Token (JWT) Handling: Session tokens are stored securely in memory, backed by encrypted browser storage layers.Route Authorization Interceptors: Automatically runs state authorization checks before rendering protected interface layouts.Cross-Site Scripting (XSS) Protections: Uses strict native data-binding methods within React combined with custom sanitize filters to clean rich incoming mock text objects.🗄 State ManagementGlobal state mutations follow an optimized Redux Toolkit architecture.TypeScriptimport { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -258,61 +183,16 @@ const authSlice = createSlice({
     },
   },
 });
-🌐 API & Services
-The network communication infrastructure is managed by a centralized Axios engine instance that automates global request headers, keeps track of processing timeouts, and handles error responses gracefully.  
-
-[!NOTE]
-All outgoing data requests are formatted with standard application/json metadata headers. If an active session token is found in the Redux store, a global security interceptor automatically injects it into the request.  
-
-📊 Mock Data Strategy
-To maintain isolation and allow standalone execution without an active backend infrastructure, Meridian uses a robust local mocking layer. This setup mirrors authentic HTTP responses and introduces intentional network latency to test loading states and UI spinners.
-
-TypeScript
-// Latency injection wrapper utility for mock services
+🌐 API & ServicesThe network communication infrastructure is managed by a centralized Axios engine instance that automates global request headers, keeps track of processing timeouts, and handles error responses gracefully.[!NOTE]All outgoing data requests are formatted with standard application/json metadata headers. If an active session token is found in the Redux store, a global security interceptor automatically injects it into the request.📊 Mock Data StrategyTo maintain isolation and allow standalone execution without an active backend infrastructure, Meridian uses a robust local mocking layer. This setup mirrors authentic HTTP responses and introduces intentional network latency to test loading states and UI spinners.TypeScript// Latency injection wrapper utility for mock services
 export const mockDelay = <T>(data: T, delayMs = 600): Promise<T> => {
   return new Promise((resolve) => setTimeout(() => resolve(data), delayMs));
 };
-🎨 UI / UX
-Theming Architecture: Built on Material UI's design framework, utilizing customized color palettes, modern typography scales, and unified border-radius styles.
-
-Light & Dark Adaptation: Implements explicit palette shifting that adjusts background contrasts and keeps readability high without requiring structural code updates.
-
-Responsive Layout Design: Uses dynamic flexible grid wrappers and adaptive viewport containers, ensuring high operational efficiency on screen sizes from mobile viewports to ultra-wide displays.
-
-⚡ Performance Optimizations
-Component Code Splitting: Uses React.lazy() and Suspense chunk splitting boundaries to lower initial JavaScript bundle footprints.
-
-Optimized Memoization: Uses useMemo and useCallback inside high-frequency tabular lists to avoid redundant component re-renders.
-
-Asset Optimization: Delivery optimization using inline vector asset formats (SVGs) instead of heavy legacy raster image structures where applicable.
-
-🧪 Testing
-The platform maintains reliable unit and interaction test tracking via integrated testing tools.
-
-Jest – Primary orchestration testing runner engine framework.
-
-React Testing Library – Evaluates structural rendering outputs by verifying user interactions rather than implementation details.
-
-Bash
-# Execute full testing pipeline suites across code bases
+🎨 UI / UXTheming Architecture: Built on Material UI's design framework, utilizing customized color palettes, modern typography scales, and unified border-radius styles.Light & Dark Adaptation: Implements explicit palette shifting that adjusts background contrasts and keeps readability high without requiring structural code updates.Responsive Layout Design: Uses dynamic flexible grid wrappers and adaptive viewport containers, ensuring high operational efficiency on screen sizes from mobile viewports to ultra-wide displays.⚡ Performance OptimizationsComponent Code Splitting: Uses React.lazy() and Suspense chunk splitting boundaries to lower initial JavaScript bundle footprints.Optimized Memoization: Uses useMemo and useCallback inside high-frequency tabular lists to avoid redundant component re-renders.Asset Optimization: Delivery optimization using inline vector asset formats (SVGs) instead of heavy legacy raster image structures where applicable.🧪 TestingThe platform maintains reliable unit and interaction test tracking via integrated testing tools.Jest – Primary orchestration testing runner engine framework.React Testing Library – Evaluates structural rendering outputs by verifying user interactions rather than implementation details.Bash# Execute full testing pipeline suites across code bases
 npm run test
 
 # Run test runner coverage suites mapping analytical files
 npm run test:coverage
-📸 Application Screenshots
-System View Workspace Screen	Visual Mock Interface Capture Reference
-Landing Presentation Hub	📷 [Insert Application Landing View Screenshot Here]
-Secure Authentication Gateway	📷 [Insert Application Login View Screenshot Here]
-Executive Management Dashboard	📷 [Insert Application Central Dashboard View Screenshot Here]
-Procurement Lifecycle Center	📷 [Insert Application Procurement Component View Screenshot Here]
-Risk Assessment & Matrix Register	📷 [Insert Application Risk Analysis View Screenshot Here]
-🚀 Quick Start
-📋 Prerequisites
-Ensure your local environment has Node.js (v18.x or newer) and npm installed.
-
-🛠️ Installation & Execution
-Bash
-# 1. Clone the repository framework files
+📸 Application ScreenshotsSystem View Workspace ScreenVisual Mock Interface Capture ReferenceLanding Presentation Hub📷 [Insert Application Landing View Screenshot Here]Secure Authentication Gateway📷 [Insert Application Login View Screenshot Here]Executive Management Dashboard📷 [Insert Application Central Dashboard View Screenshot Here]Procurement Lifecycle Center📷 [Insert Application Procurement Component View Screenshot Here]Risk Assessment & Matrix Register📷 [Insert Application Risk Analysis View Screenshot Here]🚀 Quick Start📋 PrerequisitesEnsure your local environment has Node.js (v18.x or newer) and npm installed.🛠️ Installation & ExecutionBash# 1. Clone the repository framework files
 git clone [https://github.com/your-organization/meridian.git](https://github.com/your-organization/meridian.git)
 
 # 2. Change workspace directories into root locations
@@ -323,69 +203,13 @@ npm install
 
 # 4. Spin up high performance local Vite development configurations
 npm run dev
-🏗️ Production Compilations
-Bash
-# Build optimized production-ready client bundles
+🏗️ Production CompilationsBash# Build optimized production-ready client bundles
 npm run build
 
 # Local preview testing preview allocations prior to deployment distribution
 npm run preview
-🌍 Deployment
-Meridian is configured for optimized deployment across enterprise static hosting infrastructures like AWS S3 + CloudFront, Azure Static Web Apps, Vercel, or Netlify.
-
-Plaintext
-Build output artifacts compile default targeted outputs into the isolated `/dist` directory.
-🔧 Environment Variables
-Create a .env file in the root directory to customize configuration settings:
-
-Code snippet
-VITE_APP_NAME=Meridian
+🌍 DeploymentMeridian is configured for optimized deployment across enterprise static hosting infrastructures like AWS S3 + CloudFront, Azure Static Web Apps, Vercel, or Netlify.PlaintextBuild output artifacts compile default targeted outputs into the isolated /dist directory.
+🔧 Environment VariablesCreate a .env file in the root directory to customize configuration settings:Code snippetVITE_APP_NAME=Meridian
 VITE_API_BASE_URL=[https://api.meridian-enterprise.com/v1](https://api.meridian-enterprise.com/v1)
 VITE_ENABLE_MOCK_SERVICES=true
-🛣 Roadmap
-[x] Configure core React Vite application shell with full TypeScript integration.
-
-[x] Set up Redux state slices along with Redux Persist storage integration.
-
-[x] Build out layouts for the Procurement, Risk, and Compliance dashboards.
-
-[ ] Connect production microservices to replace the temporary mock data layer.
-
-[ ] Add support for multiple languages using internationalization (i18n) workflows.
-
-[ ] Implement multi-tenant capability partitioning for enterprise deployments.
-
-🚀 Future Enhancements
-Predictive Risk Analytics: Machine learning modules that flag supply chain bottlenecks before they happen.
-
-Automated Audit Logs: Immutable logging integrations using ledger services to secure corporate tracking history.
-
-Third-Party Integrations: Built-in connection layers for ERP platforms like SAP, Oracle Cloud, and Salesforce.
-
-🤝 Contributing
-We welcome contributions to the Meridian platform. Please follow our contributing guidelines:
-
-Fork the repository.
-
-Create your feature branch (git checkout -b feature/AmazingFeature).
-
-Commit your changes (git commit -m 'Add some AmazingFeature').
-
-Push to the branch (git push origin feature/AmazingFeature).
-
-Open a Pull Request for review.
-
-📜 License
-Distributed under the MIT Enterprise License. Review accompanying LICENSE files for legal information.
-
-👨‍💻 Author
-Mohammed Danish Principal Enterprise Architect & UI Engineer
-
-🌐 Professional Portfolio
-
-💼 LinkedIn Profile
-
-📧 Enterprise Support Email
-
-⭐ Support
-If you found this project useful, please consider giving it a ⭐ on GitHub.
+🛣 Roadmap[x] Configure core React Vite application shell with full TypeScript integration.[x] Set up Redux state slices along with Redux Persist storage integration.[x] Build out layouts for the Procurement, Risk, and Compliance dashboards.[ ] Connect production microservices to replace the temporary mock data layer.[ ] Add support for multiple languages using internationalization (i18n) workflows.[ ] Implement multi-tenant capability partitioning for enterprise deployments.🚀 Future EnhancementsPredictive Risk Analytics: Machine learning modules that flag supply chain bottlenecks before they happen.Automated Audit Logs: Immutable logging integrations using ledger services to secure corporate tracking history.Third-Party Integrations: Built-in connection layers for ERP platforms like SAP, Oracle Cloud, and Salesforce.🤝 ContributingWe welcome contributions to the Meridian platform. Please follow our contributing guidelines:Fork the repository.Create your feature branch (git checkout -b feature/AmazingFeature).Commit your changes (git commit -m 'Add some AmazingFeature').Push to the branch (git push origin feature/AmazingFeature).Open a Pull Request for review.📜 LicenseDistributed under the MIT Enterprise License. Review accompanying LICENSE files for legal information.👨‍💻 AuthorMohammed Danish Principal Enterprise Architect & UI Engineer🌐 Professional Portfolio💼 LinkedIn Profile📧 Enterprise Support Email⭐ SupportIf you found this project useful, please consider giving it a ⭐ on GitHub.

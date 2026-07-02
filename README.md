@@ -353,14 +353,6 @@ For deployment parity:
 - Provide `VITE_API_URL` if a real backend is added later.
 - Ensure SPA fallback routing is enabled for direct links.
 
-## Environment Variables
-The repository includes `.env.example` with the following values:
-
-- `GEMINI_API_KEY`: Runtime-injected secret for Gemini API use in AI Studio environments.
-- `APP_URL`: The hosted application URL used by the platform runtime.
-
-The current implementation also supports `VITE_API_URL` for a future backend integration.
-
 ## Roadmap
 - Connect the mock CRUD flows to a real enterprise backend.
 - Add a complete automated testing pipeline with coverage reporting.

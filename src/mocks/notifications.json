@@ -1,0 +1,6 @@
+[
+  { "id": "n1", "title": "Procurement Request Approved", "message": "Your procurement request for Microsoft Office 365 Enterprise License Renewal has been approved by Bob Jones.", "read": false, "type": "success", "createdAt": "2026-06-29T08:30:00Z" },
+  { "id": "n2", "title": "High Risk Vendor Warning", "message": "Zensar Tech Logistical risk level raised to Critical due to expired safety certificates.", "read": false, "type": "error", "createdAt": "2026-06-29T07:15:00Z" },
+  { "id": "n3", "title": "New Procurement Request for Review", "message": "A new request for Developer Workstations is waiting for your approval.", "read": true, "type": "info", "createdAt": "2026-06-28T10:00:00Z" },
+  { "id": "n4", "title": "Compliance Audit Overdue", "message": "Oracle Financial Systems compliance certification is overdue by 12 days.", "read": false, "type": "warning", "createdAt": "2026-06-27T11:45:00Z" }
+]

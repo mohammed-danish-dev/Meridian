@@ -1,0 +1,7 @@
+[
+  { "id": "u1", "name": "Alice Smith", "email": "employee@company.com", "role": "Employee", "department": "IT" },
+  { "id": "u2", "name": "Bob Jones", "email": "manager@company.com", "role": "Manager", "department": "Procurement" },
+  { "id": "u3", "name": "Carol White", "email": "compliance@company.com", "role": "Compliance Officer", "department": "Legal" },
+  { "id": "u4", "name": "Dave Brown", "email": "auditor@company.com", "role": "Auditor", "department": "Finance" },
+  { "id": "u5", "name": "Eve Black", "email": "admin@company.com", "role": "Administrator", "department": "IT" }
+]

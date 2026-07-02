@@ -193,7 +193,7 @@ The application follows a layered frontend architecture:
 
 **Redux Flow Diagram**
 
-> Insert Redux Flow Diagram here.
+![image alt](https://github.com/mohammed-danish-dev/Meridian/blob/213449b592d58426122d412b547c5f1ba16893a6/Image%20-%2002.png)
 
 The Redux implementation is centered around `src/store/store.js` and the slices under `src/store/slices/`.
 
@@ -210,7 +210,7 @@ The Redux implementation is centered around `src/store/store.js` and the slices 
 
 **Router Flow Diagram**
 
-> Insert Router Flow Diagram here.
+![image alt](https://github.com/mohammed-danish-dev/Meridian/blob/213449b592d58426122d412b547c5f1ba16893a6/Image%20-%2003.png)
 
 Routing is defined in `src/routes/router.jsx` and uses lazy loading for route-level code splitting.
 
@@ -224,7 +224,7 @@ Routing is defined in `src/routes/router.jsx` and uses lazy loading for route-le
 
 **Component Hierarchy Diagram**
 
-> Insert Component Hierarchy Diagram here.
+![image alt](https://github.com/mohammed-danish-dev/Meridian/blob/213449b592d58426122d412b547c5f1ba16893a6/Image%20-%2004.png)
 
 - **Layouts**: `AppLayout`, `Header`, `Sidebar`, and `GlobalSearch` form the persistent enterprise shell.
 - **Pages**: Feature pages under `src/features/` implement landing, auth, dashboard, module lists, reports, settings, and public resources.

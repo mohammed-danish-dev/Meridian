@@ -1,4 +1,4 @@
-Here is your completely restructured, production-ready README.md. It has been meticulously formatted with professional spacing, consistent Markdown components, and enhanced hierarchy.You can copy and paste this block directly into your project's root file:Markdown# Meridian
+MERIDIAN - Guiding Enterprise Excellence.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Enterprise-SaaS-blue?style=for-the-badge&logo=enterprise" alt="Enterprise SaaS" />

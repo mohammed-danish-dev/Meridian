@@ -1,4 +1,4 @@
-# Meridian
+# Meridian - Guiding Enterprise Excellence.
 
 > Enterprise Governance, Risk, Compliance, and Procurement Platform
 

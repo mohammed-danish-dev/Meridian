@@ -24,7 +24,8 @@ Meridian is a role-aware enterprise front-end that centralizes procurement, vend
 
 ---
 > [!NOTE]
-> Use Demo Credentials provided below the Login Form to access Multiple Demo Roles [To Check That Kindly Scroll Down]
+> Use Demo Credentials provided below the Login Form to access Multiple Demo Roles [To Check That Kindly Scroll Down in The Login Page - Thank You]
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Business Background](#business-background)
